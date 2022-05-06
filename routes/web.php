@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\PageController;
+Route::get('/',
+  [PageController::class, 'posts']
+);
+
+Route::get('blog/{post}',
+  [PageController::class, 'post']
+)->name('post');
 
 Auth::routes();
 
