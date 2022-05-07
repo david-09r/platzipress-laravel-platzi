@@ -29,11 +29,11 @@
                                 </section>
                                 <section class="mb-3">
                                     <label for="">Contenido *</label>
-                                    <textarea name="body" id="" class="form-control" rows="4" required></textarea>
+                                    <textarea name="body" class="form-control" rows="4" required></textarea>
                                 </section>
                                 <section class="mb-3">
                                     <label for="">Contenido embebido</label>
-                                    <textarea name="iframe" id="" class="form-control"></textarea>
+                                    <textarea name="iframe" class="form-control"></textarea>
                                 </section>
                                 <section class="mb-3">
                                     @csrf

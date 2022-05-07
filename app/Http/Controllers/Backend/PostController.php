@@ -38,14 +38,17 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
+
       $post = Post::create([
           'user_id' => auth()->user()->id
-        ] + $request->validated());
+        ] + $request->all());
 
         if($request->file('file')) {
           $post -> image = $request->file('file')->store('posts', 'public');
           $post->save();
         }
+
+        dd($post);
 
         return back()->with('status', 'Creando con exito');
     }
@@ -81,6 +84,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post -> delete();
+      $posts = Post::latest()->get();
+
+      return view('posts.index', compact('posts'));
     }
 }
