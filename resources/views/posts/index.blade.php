@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         Artículos
-                        <a href="{{ route('posts.index') }}" class="btn btn-sm btn-primary float-right">
+                        <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary float-right">
                             Crear
                         </a>
                     </div>
