@@ -20,7 +20,7 @@ Route::get('/',
   [PageController::class, 'posts']
 );
 
-Route::get('blog/{post}',
+Route::get('blog/{post:slug}',
   [PageController::class, 'post']
 )->name('post');
 
